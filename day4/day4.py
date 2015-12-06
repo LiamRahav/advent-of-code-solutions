@@ -13,6 +13,7 @@ If your secret key is pqrstuv, the lowest number it combines with to make an MD5
 """
 
 from hashlib import md5
+from termcolor import colored
 
 if __name__ == '__main__':
     f_input = 'iwrupvqb' # input generated from site
@@ -23,14 +24,18 @@ if __name__ == '__main__':
 
         combo_string = f_input + i_string
 
-        hex_string = md5(combo_string.encode()).hexdigest()
+        md5_string = md5(combo_string.encode())
+        hex_string = md5_string.hexdigest()
 
         if hex_string[:5] == '0' * 5:
-            print("PASS: " + hex_string)
-            print("PASSING NUMBER: " + i_string)
+            print colored("PASS:", "green"),
+            print (hex_string)
+            print colored("PASSING NUMBER:", "green"),
+            print(i_string)
             break
         else:
-            print("FAIL: " + hex_string)
+            print colored("FAIL:", "red"),
+            print(hex_string)
 
         i += 1
 

@@ -17,11 +17,14 @@ if __name__ == '__main__':
         hex_string = md5(combo_string.encode()).hexdigest()
 
         if hex_string[:6] == '0' * 6:
-            print colored("PASS: " + hex_string, "green")
-            print colored("PASSING NUMBER: " + i_string, "green")
+            print colored("PASS:", "green"),
+            print (hex_string)
+            print colored("PASSING NUMBER:", "green"),
+            print(i_string)
             break
         else:
-            print colored("FAIL: " + hex_string, "red")
+            print colored("FAIL:", "red"),
+            print(hex_string)
 
         i += 1
 
