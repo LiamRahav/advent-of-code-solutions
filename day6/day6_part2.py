@@ -57,4 +57,5 @@ if __name__ == '__main__':
         for column in range(1000):
             total += lights[(row, column)]
 
-    print("TOTAL: " + str(total))
+    print colored("TOTAL:", "magenta"),
+    print(str(total))

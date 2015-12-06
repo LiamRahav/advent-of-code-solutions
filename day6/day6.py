@@ -10,6 +10,7 @@ Lights in your grid are numbered from 0 to 999 in each direction; the lights at 
 To defeat your neighbors this year, all you have to do is set up your lights by doing the instructions Santa sent you in order.
 """
 
+from termcolor import colored
 
 def point_to_int(arr):
     for i in range(len(arr)):
@@ -70,4 +71,5 @@ if __name__ == '__main__':
             if lights[(row, column)]:
                 total += 1
 
-    print("TOTAL: " + str(total))
+    print colored("TOTAL:", "magenta"),
+    print(str(total))
