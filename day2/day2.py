@@ -15,7 +15,6 @@ if __name__ == '__main__':
 
     total = 0
     for line in f_input:
-        smallest = 1000000000000000000000
         line = line.strip().split("x")
         for i in range(len(line)):
             line[i] = int(line[i])
@@ -23,6 +22,8 @@ if __name__ == '__main__':
         side1 = line[0] * line[1]
         side2 = line[0] * line[2]
         side3 = line[1] * line[2]
+
+        smallest = 1000
 
         if side1 < smallest:
             smallest = side1

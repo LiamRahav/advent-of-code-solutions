@@ -36,5 +36,3 @@ Again fairly easy. They want to know the first time Santa goes into the basement
 need to catch at what instruction we hit floor -1. To do this, I recorded the instruction we were on in the variable 
 `pos` and from there I proceeded the same as I did in Part 1. The only exception is that I checked if the floor was
 equal to -1 and then broke, and outputted the position rather than the floor number.
-
-Very slightly harder problem, still easy solution.

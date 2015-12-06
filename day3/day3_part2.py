@@ -18,6 +18,7 @@ For example:
 """
 
 from day3 import Point
+from termcolor import colored
 
 if __name__ == '__main__':
     f = open("input.txt")
@@ -49,9 +50,9 @@ if __name__ == '__main__':
             point.move_west()
 
         if is_robot:
-            print("ROBOT: (%.1f, %.1f)" % (point.x, point.y))
+            print colored("ROBOT: (%.1f, %.1f)" % (point.x, point.y), "red")
         else:
-            print("SANTA: (%.1f, %.1f)" % (point.x, point.y))
+            print colored("SANTA: (%.1f, %.1f)" % (point.x, point.y), "blue")
 
         valid = True
         for comparison_point in visited_points:
@@ -71,4 +72,5 @@ if __name__ == '__main__':
 
         counter += 1
 
+    print colored("ANSWER:", "green"),
     print(total)

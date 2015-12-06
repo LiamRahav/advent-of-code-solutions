@@ -16,6 +16,7 @@ For example:
 ^v^v^v^v^v delivers a bunch of presents to some very lucky children at only 2 houses.
 """
 
+from termcolor import colored
 
 class Point:
     def __init__(self, x=0, y=0):
@@ -54,7 +55,7 @@ if __name__ == '__main__':
         elif c == "<":
             point.move_west()
 
-        print("(%.1f, %.1f)" % (point.x, point.y))
+        print colored("(%.1f, %.1f)" % (point.x, point.y), "magenta")
 
         valid = True
         for comparison_point in visited_points:
@@ -68,4 +69,5 @@ if __name__ == '__main__':
         prev_x = point.x
         prev_y = point.y
 
+    print colored("ANSWER:", "green"),
     print(total)
