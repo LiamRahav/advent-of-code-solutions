@@ -1,4 +1,4 @@
-This repo is full of all my solutions for the Advent of Code Christmas challenge thing (http://adventofcode.com)
+This repo is full of all my solutions for the Advent of Code christmas programming challenge (http://adventofcode.com)
 
 I wrote everything in Python 2.7.6
 

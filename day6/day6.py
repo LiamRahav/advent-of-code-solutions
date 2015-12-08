@@ -12,6 +12,7 @@ To defeat your neighbors this year, all you have to do is set up your lights by 
 
 from termcolor import colored
 
+
 def point_to_int(arr):
     for i in range(len(arr)):
                 arr[i] = int(arr[i])
